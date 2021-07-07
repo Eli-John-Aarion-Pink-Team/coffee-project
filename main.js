@@ -93,4 +93,4 @@ coffeeDiv.innerHTML = renderCoffees(coffees);
 additionSubmit.addEventListener('click', addCoffee)
 dropSelection.addEventListener('change', updateCoffees)
 // submitButton.addEventListener('click', updateCoffees);
-search.addEventListener('keypress', searchCoffees)
+search.addEventListener('keyup', searchCoffees)
