@@ -4,6 +4,20 @@
     font-size: 25px;
 }
 
+.coffee-name {
+    font-weight: bold;
+    font-size: 35px;
+    float: left;
+}
+
+.coffee-roast {
+    color: lightgray;
+    /*float: left;*/
+    clear: right;
+    font-size: 35px;
+    padding-left: 10px;
+}
+
 .header {
     background: lightgray;
     margin-left: 0;
