@@ -1,12 +1,29 @@
 
+* {
+    font-family: 'Zen Tokyo Zoo', cursive;
+    font-size: 25px;
+}
+
+.header {
+    background: lightgray;
+    margin-left: 0;
+    padding-left: 0;
+    color: black;
+}
 h1 {
     display: flex;
     justify-content: center;
     padding-bottom: 50px;
+    padding-top: 15px;
+}
+
+h2 {
+    padding-top: 30px;
 }
 
 body {
-    padding-left: 20px;
+    background: #444343;
+    color: white;
 }
 
 table {
