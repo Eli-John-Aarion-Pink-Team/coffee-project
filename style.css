@@ -1,3 +1,14 @@
+
+h1 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+body {
+    padding-left: 20px;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;

@@ -6,7 +6,9 @@
 //
 // Add functionality to update the displayed coffee as the user types into the search
 // box, or as soon as they select an option from the select.
-// function renderCoffee(coffee) {
+
+
+ function renderCoffee(coffee) {
 
     var html = '<div class="coffee">';
     html += '<p>' + coffee.name + '</p>';
@@ -19,9 +21,23 @@
 function renderCoffees(coffees) {
     var html = '';
     for(var i = 0; i <= coffees.length - 1; i++) {
-        html += renderCoffees(coffees[i]);
+        html += renderCoffee(coffees[i]);
     }
     return html;
+}
+
+
+
+function searchCoffees() {
+    var searchValue = search.value
+    var filteredCoffees = [];
+    console.log(searchValue)
+    coffees.forEach(function (coffee) {
+        if (coffee.name.toLowerCase().includes(searchValue.toLowerCase())) {
+            filteredCoffees.push(coffee);
+        }
+    });
+    coffeeDiv.innerHTML = renderCoffees(filteredCoffees);
 }
 
 function updateCoffees(e) {
@@ -29,6 +45,11 @@ function updateCoffees(e) {
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
+        if (selectedRoast === "all") {
+            coffees.forEach(function (name) {
+                filteredCoffees.push(name)
+            });
+        }
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
@@ -57,7 +78,12 @@ var coffees = [
 var coffeeDiv = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var search = document.querySelector('#searchBar')
+var dropSelection = document.querySelector('#roast-selection')
 
 coffeeDiv.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+
+dropSelection.addEventListener('change', updateCoffees)
+// submitButton.addEventListener('click', updateCoffees);
+search.addEventListener('change', searchCoffees)
