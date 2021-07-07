@@ -29,6 +29,7 @@
     margin-left: 0;
     padding-left: 0;
     color: black;
+    border: black solid 5px;
 }
 h1 {
     display: flex;
@@ -44,6 +45,9 @@ h2 {
 body {
     background: #444343;
     color: white;
+    border: black solid 10px;
+    margin: 0;
+    padding-left: 0;
 }
 
 table {
