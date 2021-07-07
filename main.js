@@ -1,8 +1,14 @@
 "use strict"
 
-function renderCoffee(coffee) {
+// Add functionality to search through the coffees by name, and
+// display only the coffees that match the provided search term
+// (You will need to add an input field to the existing form for this)
+//
+// Add functionality to update the displayed coffee as the user types into the search
+// box, or as soon as they select an option from the select.
+// function renderCoffee(coffee) {
+
     var html = '<div class="coffee">';
-    html += '<p>' + coffee.id + '</p>';
     html += '<p>' + coffee.name + '</p>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
@@ -13,7 +19,7 @@ function renderCoffee(coffee) {
 function renderCoffees(coffees) {
     var html = '';
     for(var i = 0; i <= coffees.length - 1; i++) {
-        html += renderCoffee(coffees[i]);
+        html += renderCoffees(coffees[i]);
     }
     return html;
 }
