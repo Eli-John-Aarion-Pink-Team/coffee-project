@@ -60,7 +60,8 @@ function updateCoffees(e) {
 function addCoffee() {
     var filteredCoffees = [];
     var newCoffeeValue = additionSubmit.value;
-    console.log(newCoffeeValue);
+    console.log(additionSubmit.value);
+
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
