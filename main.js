@@ -66,9 +66,8 @@ function addCoffee() {
         roast: document.getElementById('roast-addition').value
     }
     coffees.push(newCoffee)
-    filteredCoffees.push(coffees)
 
-    coffeeDiv.innerHTML = renderCoffees(filteredCoffees);
+    coffeeDiv.innerHTML = renderCoffees(coffees);
 
     // let h = renderCoffee(coffee)
     // console.log(document.getElementById('roast-addition').value)
