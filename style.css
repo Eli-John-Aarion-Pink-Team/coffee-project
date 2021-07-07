@@ -7,13 +7,14 @@
 .coffee-name {
     font-weight: bold;
     font-size: 35px;
-    float: left;
+    float: right;
+    clear: right;
 }
 
 .coffee-roast {
     color: lightgray;
-    /*float: left;*/
-    clear: right;
+    float: right;
+    clear: left;
     font-size: 35px;
     padding-left: 10px;
 }
