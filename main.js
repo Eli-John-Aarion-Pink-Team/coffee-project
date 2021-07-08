@@ -46,28 +46,33 @@ function updateCoffees(e) {
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
         if (selectedRoast === "all") {
-            coffees.forEach(function (name) {
-                filteredCoffees.push(name)
-            });
-        }
-        if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+            // coffee.forEach(function (name) {
+            //     filteredCoffees.push(name)});
+        } else if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
         // Event.preventDefault();
     });
+
     coffeeDiv.innerHTML = renderCoffees(filteredCoffees);
 }
 
+var usageCount = 0; // to prevent filling the page with new coffee
 function addCoffee() {
-    let filteredCoffees = [];
+
+    if (usageCount > 0) {
+        document.location.reload(true);
+    }
     let newCoffee = {
-        id: 16,
+        id: 15,
         name: document.getElementById('name-addition').value,
         roast: document.getElementById('roast-addition').value
     }
     coffees.push(newCoffee)
 
     coffeeDiv.innerHTML = renderCoffees(coffees);
+    usageCount++;
 
     // let h = renderCoffee(coffee)
     // console.log(document.getElementById('roast-addition').value)
